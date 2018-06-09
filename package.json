@@ -1,0 +1,23 @@
+{
+  "name": "econometry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDoges/econometry.git"
+  },
+  "author": "Patrykieł & Tomkieł",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDoges/econometry/issues"
+  },
+  "homepage": "https://github.com/TheDoges/econometry#readme",
+  "dependencies": {
+    "math-random": "^1.0.1",
+    "webpack": "^4.12.0"
+  }
+}
