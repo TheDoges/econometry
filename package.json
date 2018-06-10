@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/TheDoges/econometry#readme",
   "dependencies": {
-    "math-random": "^1.0.1",
+    "mathjs": "^4.4.2",
     "webpack": "^4.12.0"
   }
 }
