@@ -5,6 +5,6 @@
 *  NPM
 
 ## Sposób uruchomienia
-*  Wywołanie komendy npm install
-*  Wywołanie komendy npm build
-*  Uruchomienie pliku dist/index.html w przeglądarce internetowej
+*  Wywołanie komendy `npm install`
+*  Wywołanie komendy `npm build`
+*  Uruchomienie pliku **dist/index.html** w przeglądarce internetowej
