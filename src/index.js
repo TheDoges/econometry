@@ -24,6 +24,8 @@ const inputData = [
     [17, 1.5, 4]
 ];
 
-const results = modelSolver.solve(inputData);
-
-console.table(results);
+module.exports = {
+    solveModel: () => {
+      console.table(modelSolver.solve(inputData));
+    }
+  };
