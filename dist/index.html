@@ -4,10 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>webpack Patterns</title>
+    <link rel="stylesheet" href="../node_modules/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <script src="main.js"></script>
     <input type="file" id="input_file"/>
     <button onclick="Econometry.calculate()">Calculate Model</button>
+    <div id="chart" class="chart-content"></div>
+    <div id="yEquation" class="output-container">Equation for y = </div>
+    <div id="da" class="output-container">da = </div>
+    <div id="su" class="output-container">su = </div>
+    <div id="fi2" class="output-container">fi2 = </div>
+    <div id="r2" class="output-container">r2 = </div>
+    <div id="v" class="output-container">v = </div>
+    <script src="main.js"></script>
   </body>
 </html>

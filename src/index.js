@@ -1,5 +1,6 @@
 const modelSolver = require ('./modelSolver');
 const fileReader = require('./fileReader');
+const chart = require('./chart');
 
 /* Example inputData in file */
 // [7.6, 156, 3],
@@ -10,6 +11,23 @@ const fileReader = require('./fileReader');
 
 module.exports = {
     calculate: () => {
-        console.table(modelSolver.solve(fileReader.getInputData()));
+        var inputData = fileReader.getInputData();
+        var modelData = modelSolver.solve(inputData);
+        var chartData = modelSolver.getDataForChart(modelData, inputData);
+        console.log(chartData);
+        chart.generatePointChart('#chart', chartData.labels, chartData.series, false);
+        var modelDataForView = modelSolver.getDataForView(modelData);
+        assignModelDataToView(modelDataForView);
     }
   };
+
+var assignModelDataToView = (modelDataForView) => {
+    document.getElementById("yEquation").innerText = modelDataForView.y;
+        document.getElementById("da").innerText = modelDataForView.da;
+        document.getElementById("su").innerText = modelDataForView.su;
+        document.getElementById("fi2").innerText = modelDataForView.fi2;
+        document.getElementById("r2").innerText = modelDataForView.r2;
+        document.getElementById("v").innerText = modelDataForView.v;
+}
+
+

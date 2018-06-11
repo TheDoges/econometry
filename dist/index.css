@@ -1,0 +1,30 @@
+body {
+    background-color: #292F33;
+}
+
+.output-container {
+    border: solid #66757F;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    border-radius: 10px;    
+}
+
+.output-container:hover {
+    border: solid #CCD6DD;
+    box-shadow: 0px 0px 0px 1px #CCD6DD;
+}
+
+.chart-content {
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 15px 0 0 0;
+    background-color: #EADBC4;
+    border: solid #EADBC4;
+    border-radius: 15px;
+}
+
+input {
+    color: #fff;
+}

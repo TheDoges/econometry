@@ -31,11 +31,53 @@ module.exports.solve = (inputData) => {
     const v = 100*su / math.mean(y);
 
     return {
-        b: b.toString(),
-        da: da.toString(),
+        b: b,
+        da: da,
         su: su,
         fi2: fi2,
         r2: r2,
         v: v
+    }
+}
+
+module.exports.getDataForChart = (modelData, inputData) => {
+    labels = [];
+    inputSeries = [];
+    calculatedSeries = [];
+
+    var calculateY = (x1t, x2t) => {
+        var a = Number(modelData.b._data[0]);
+        var b = Number(modelData.b._data[1]*x1t);
+        var c = Number(modelData.b._data[2]*x2t);
+
+        return a + b + c;
+    }
+    for(var i = 0; i < inputData.length; ++i) {
+        labels.push(i+1);
+        inputSeries.push(inputData[i][0]);
+        calculatedSeries.push(calculateY(inputData[i][1], inputData[i][2]));
+    }
+
+    return {
+        series: [inputSeries, calculatedSeries],
+        labels: labels
+    }
+}
+
+module.exports.getDataForView = (modelData) => {
+    var y = "y = " + modelData.b._data[0] + " + " + modelData.b._data[1] + "*x1t + " + modelData.b._data[2] + "*x2t";
+    var da = "da = " + modelData.da._data;
+    var su = "su = " + modelData.su;
+    var fi2 = "fi2 = " + modelData.fi2;
+    var r2 = "r2 = " + modelData.r2;
+    var v = "v = " + modelData.v;
+
+    return {
+        y,
+        da,
+        su,
+        fi2,
+        r2,
+        v
     }
 }
